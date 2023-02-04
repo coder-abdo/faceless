@@ -1,10 +1,10 @@
 import React from 'react';
-import { Navigate } from 'react-router-dom'
-type Props = {
+import { Navigate, RouteProps } from 'react-router-dom'
+type Props = RouteProps & {
 	isSignedIn: boolean;
-	children: React.ReactNode;
+	children: JSX.Element
 }
-const Protected= ({ isSignedIn, children }:Props) => {
+const Protected:React.FC<Props>= ({ isSignedIn, children }) => {
 	if (!isSignedIn) {
 		return <Navigate to="/" replace />
 	}
