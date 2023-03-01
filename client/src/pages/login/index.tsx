@@ -13,7 +13,7 @@ export const LoginSingup = () => {
 				<Title theme={theme} isInLogo>FACELESS</Title>
 			</LoginLogo>
 			{!isSuccessToNavigate ? <Signup /> : <Login />}
-			<HaveAnAccount role="link" onClick={() => setIsSuccessToNavigate(!isSuccessToNavigate)}>{isSuccessToNavigate ? 'already have an account?' : "haven't create an account yet?"}</HaveAnAccount>
+			<HaveAnAccount role="link" onClick={() => setIsSuccessToNavigate(!isSuccessToNavigate)}>{!isSuccessToNavigate ? 'already have an account?' : "haven't create an account yet?"}</HaveAnAccount>
 		</Container>
 	)
 }
